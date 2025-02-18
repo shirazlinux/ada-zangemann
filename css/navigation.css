@@ -45,8 +45,8 @@ nav.main-menu li.livre a {
     width: 100%;
     background-repeat: no-repeat;
     background-image: url(../images/ada-300.png);
-    background-position: left 2em;
-    background-size: 72%;
+    background-position: center 2.3em;
+    background-size: 64%;
     transition: all 1s;
 }
 
@@ -65,7 +65,51 @@ nav.main-menu a:hover {
 }
 
 
+/* language selector */
 
+.custom-select {
+    min-width: 100%;
+    position: relative;
+    margin: 0 0 0.8rem;
+  }
+  
+.custom-select select {
+    appearance: none;
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.6em 2em 0.6em 1em;
+    background-color: var(--yellow3);
+    border: 2px solid var(--green);
+    border-radius: 0.25rem;
+    color: var(--dark-green);
+    cursor: pointer;
+}
+
+.custom-select::before,
+.custom-select::after {
+    --size: 0.3rem;
+    content: "";
+    position: absolute;
+    right: 1rem;
+    pointer-events: none;
+}
+
+.custom-select::before {
+    border-left: var(--size) solid transparent;
+    border-right: var(--size) solid transparent;
+    border-bottom: var(--size) solid var(--dark-green);
+    top: 50%;
+    transform: translateY(20%);
+    
+}
+
+.custom-select::after {
+    border-left: var(--size) solid transparent;
+    border-right: var(--size) solid transparent;
+    border-top: var(--size) solid var(--dark-green);
+    top: 50%;
+    transform: translateY(-120%);
+}
 
 
 
@@ -139,12 +183,13 @@ footer ul {
     list-style-type: none;
     columns: 2;
 }
-footer li {
 
-}
 footer a {
     text-decoration: none;
 }
 footer a:hover {
     text-decoration: underline;
 }
+
+
+

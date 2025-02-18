@@ -1,16 +1,14 @@
-var existingLanguages = ['en', 'fr', 'de'];
+
 var menus = {
     'fr': '    <label for="menu-collapsed">🛹<span class="accessibility">Menu</span></label>\n' +
         '    <input type="checkbox" id="menu-collapsed" name="menu-collapsed" />\n' +
         '    <ul>\n' +
         '        <li>\n' +
-        '            <div class="custom-select">\n' +
-        '               <select name="language-selector" id="language-selector" onchange="changeLanguage()">\n' +
-        '                   <option value="fr" selected>Français</option>\n' +
-        '                   <option value="de">Deutsch</option>\n' +
-        '                   <option value="en">English</option>\n' +
-        '               </select>\n' +
-        '           </div>\n' +
+        '            <select name="language-selector" id="language-selector" onchange="changeLanguage()">\n' +
+        '                <option value="fr" selected>français</option>\n' +
+        '                <option value="de">Deutsch</option>\n' +
+        '                <option value="en">english</option>\n' +
+        '            </select>\n' +
         '        </li>\n' +
         '        <li><a href="index_fr.html">Accueil</a></li>\n' +
         '        <li><a href="presentation_fr.html">Présentation</a></li>\n' +
@@ -31,13 +29,11 @@ var menus = {
         '    <input type="checkbox" id="menu-collapsed" name="menu-collapsed" />\n' +
         '    <ul>\n' +
         '        <li>\n' +
-        '            <div class="custom-select">\n' +
-        '               <select name="language-selector" id="language-selector" onchange="changeLanguage()">\n' +
-        '                   <option value="fr">Français</option>\n' +
-        '                   <option value="de">Deutsch</option>\n' +
-        '                   <option value="en" selected>English</option>\n' +
-        '               </select>\n' +
-        '           </div>\n' +
+        '            <select name="language-selector" id="language-selector" onchange="changeLanguage()">\n' +
+        '                <option value="fr">français</option>\n' +
+        '                <option value="de">deutsch</option>\n' +
+        '                <option value="en" selected>english</option>\n' +
+        '            </select>\n' +
         '        </li>\n' +
         '        <li><a href="index_en.html">Home</a></li>\n' +
         '        <li><a href="presentation_en.html">Presentation</a></li>\n' +
@@ -58,13 +54,11 @@ var menus = {
         '    <input type="checkbox" id="menu-collapsed" name="menu-collapsed" />\n' +
         '    <ul>\n' +
         '        <li>\n' +
-        '            <div class="custom-select">\n' +
-        '               <select name="language-selector" id="language-selector" onchange="changeLanguage()">\n' +
-        '                   <option value="fr">Français</option>\n' +
-        '                   <option value="de" selected >Deutsch</option>\n' +
-        '                   <option value="en">English</option>\n' +
-        '               </select>\n' +
-        '           </div>\n' +
+        '            <select name="language-selector" id="language-selector" onchange="changeLanguage()">\n' +
+        '                <option value="fr">français</option>\n' +
+        '                <option value="de" selected >Deutsch</option>\n' +
+        '                <option value="en">english</option>\n' +
+        '            </select>\n' +
         '        </li>\n' +
         '        <li><a href="index_de.html">Startseite</a></li>\n' +
         '        <li><a href="presentation_de.html">Präsentation</a></li>\n' +
@@ -83,43 +77,49 @@ var menus = {
         '    </ul>'
 }
 
-
-if (monhash = window.location.hash)  {
-    scrollToId(monhash)
-}
-
-function scrollToId(monhash) {
-    var monhash = monhash.substring(1);
-    var mapage = document.getElementById(monhash);
-    if (mapage) {
-        var mapagey = mapage.offsetTop;
-        var conteneur = document.getElementById('conte');
-        console.log(conteneur);
-        console.log("scroll to ", monhash);
-        conteneur.scrollTo({
-            top: mapage.offsetTop,
-            /* behavior: 'smooth' */
-        });
-    }
-}
-
-function getNavigatorPreferredLanguage() {
+function getPreferredLanguage() {
     let preferredLanguage = navigator.language.split("-")[0];
+    console.log(preferredLanguage);
     if (preferredLanguage in existingLanguages) {
         return preferredLanguage;
     } else {
         return 'en';
     }
 }
+function initialisation() {
+    console.log('initialisation');
+    let existingLanguages = ['fr', 'en', 'de'];
+    localStorage.clear();
+    let currentLanguage = getPreferredLanguage();
+    let newUrl = getServerName() + currentLanguage +  '/index_' + currentLanguage + '.html';
+    localStorage.setItem('ada_currentLanguage', currentLanguage);
+    localStorage.setItem('ada_myHref', newUrl);
+    localStorage.setItem('ada_pageId', '');
+    localStorage.setItem('ada_serverName', getServerName());
+    localStorage.setItem('ada_existingLanguages', existingLanguages);
+    localStorage.setItem('ada_reading', false);
+    console.log(localStorage);
+    goToLocation(localStorage.getItem('ada_myHref'));
+}
 
 function changeLanguage() {
     let newLanguage = document.getElementById('language-selector').value;
-    currentUrl = localStorage.getItem('ada_currentUrl');
-    myHref = currentUrl.replace(/_[a-z]{2}\./, '_' + newLanguage + '.');
+    myHref = localStorage.getItem('ada_myHref');
+    console.log('changeLanguage');
+    console.log(myHref);
+    myFile = myHref.split('#')[0];
+    myHref = myHref.replace(/_[a-z]{2}\./, '_' + newLanguage + '.');
     myHref = myHref.replace(/\/[a-z]{2}\//, '/' + newLanguage + '/');
-    localStorage.setItem('ada_currentUrl', myHref);
+    if (localStorage.getItem('ada_pageId').length > 0) {
+        myHref = myFile + '#' + localStorage.getItem('ada_pageId');
+    }
+    localStorage.setItem('ada_myHref', myHref);
     localStorage.setItem('ada_currentLanguage', newLanguage);
-    window.location.href = myHref;
+    if (localStorage.getItem('ada_reading')) {
+        goToLocation(myHref);
+    } else {
+        goToLocation(myFile);
+    }
 }
 
 function getServerName() {
@@ -133,54 +133,63 @@ function getServerName() {
     }
 }
 
+async function goToLocation(location) {
+    console.log('goToLocation');
+    window.location.href = location;
+    return 1;
+}
+
+async function goToPage() {
+    console.log('je suis goToPage');
+    let pageId = localStorage.getItem('ada_pageId');
+    if (localStorage.getItem('ada_pageId').length === 0) {
+        return 1;
+    } else {
+        console.log('goToPage ' + localStorage.getItem('ada_pageId'));
+        document.getElementById(pageId).scrollTop = 0;
+        let myFile = localStorage.getItem('ada_myHref').split('#')[0];
+        console.log(myFile);
+        let myHref = myFile + '#' + pageId;
+        localStorage.setItem('ada_myHref', myHref);        return 1;
+    }
+}
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) =>{
+        //let pageId = entry.target.parentNode.getAttribute('id');
+        if (entry.isIntersecting) {
+            let pageId = entry.target.parentNode.getAttribute('id');
+            localStorage.setItem('ada_pageId', pageId);
+        }
+    });
+});
+
 function getConteneur() {
     if (document.getElementById('conte')) {
         return document.getElementById('conte');
+        // conteneur.focus();
     } else {
         return document.getElementsByTagName('article')[0]
     }
 }
 
-function initialisation() {
-    localStorage.clear();
-    let currentLanguage = window.location.href.match(/_(.*)\./)[1];
-    if (!currentLanguage) {
-        let currentLanguage = getNavigatorPreferredLanguage();
-    }
-    let newUrl = getServerName() + '/' + currentLanguage +  '/index_' + currentLanguage + '.html';
-    localStorage.setItem('initialisation', 'initialized');
-    localStorage.setItem('ada_currentLanguage', currentLanguage);
-    localStorage.setItem('ada_currentUrl', newUrl);
-    localStorage.setItem('ada_pageId', '');
-    localStorage.setItem('ada_serverName', getServerName());
-    localStorage.setItem('ada_existingLanguages', existingLanguages);
-    localStorage.setItem('ada_reading', false);
-    localStorage.setItem('ada_changingLanguage', false);
-    console.log(localStorage);
-}
-// update location hash on scroll
-// and activate scroll hints
-
 window.addEventListener('load', () => {
+    //localStorage.clear();
 
-    if (window.location.href.indexOf('index') !== -1) {
+    if (localStorage.getItem('ada_serverName') === null) {
         initialisation();
     }
-    const allPages = document.querySelectorAll('.ada-page');
-    const allHScroll = document.querySelectorAll('.horizontal-scroll');
-    const currentLanguage = localStorage.getItem('ada_currentLanguage');
 
-    // if (document.getElementById("main-menu")) {
-    //     document.getElementById("main-menu").innerHTML = menus[localStorage.getItem('ada_currentLanguage')];
-    // }
+    let currentLanguage = localStorage.getItem('ada_currentLanguage');
+    if (document.getElementById("main-menu")) {
+        document.getElementById("main-menu").innerHTML = menus[currentLanguage];
+    }
     let conteneur = getConteneur();
     conteneur.addEventListener('click', (e) => {
         document.getElementById('menu-collapsed').checked = false;
     });
-
     if (window.location.href.indexOf('az_') === -1) {
-        // paratexte
-        localStorage.setItem('ada_currentUrl', window.location.href);
+        localStorage.setItem('ada_myHref', window.location.href);
         localStorage.setItem('ada_pageId', '');
         localStorage.setItem('ada_reading', false);
         let footerFile = getServerName() + '/' + currentLanguage + "/footer_" + currentLanguage + ".frg.html";
@@ -192,38 +201,44 @@ window.addEventListener('load', () => {
             document.getElementById(idToFill).innerHTML = y;
         }
     } else {
-        //lecture du conte
+        console.log('reading');
+        localStorage.setItem('ada_myHref', window.location.href);
         localStorage.setItem('ada_reading', true);
-        conteneur.addEventListener('scroll', (e) => {
-            // document.getElementById('menu-collapsed').checked = false;
+        if (localStorage.getItem('ada_pageId').length === 0) {
+            localStorage.setItem('ada_pageId', 'page-01');
+        }
+        let allPages = document.querySelectorAll('.ada-page');
+        const allHScroll = document.querySelectorAll('.horizontal-scroll');
 
-            allPages.forEach(page => {
-                const rect = page.getBoundingClientRect();
-                if (rect.top >= 0 && rect.top < 150) {
-                    var pageName = page.getAttribute('id');
-                    localStorage.setItem('ada_pageId', pageName);
-                    /* console.log("update hash", pageName) */
-                    const oldHash = window.location.hash;
-                    console.log(oldHash + '/' + pageName);
-                    if ('#' + pageName !== oldHash) {
-                        const location = window.location.toString().split('#')[0];
-                        history.replaceState(null, null, location + '#' + pageName);
-                    }
-                }
-                ;
-                allHScroll.forEach(hScroll => {
-                    const rect = hScroll.getBoundingClientRect();
-                    if (rect.top >= 0 && rect.top < 150) {
-                        hScroll.classList.add('on-screen');
-                    } else {
-                        hScroll.classList.remove('on-screen');
-                    }
-                });
+
+        conteneur.addEventListener('scrollend', (e) => {
+            document.getElementById('menu-collapsed').checked = false;
+            allPages.forEach((myPage) => {
+                let cible = myPage.children[0];
+                observer.observe(cible);
             });
-            localStorage.setItem('ada_currentUrl', window.location.href);
+            goToPage();
             console.log(localStorage);
         });
     }
+
+            //     const location = window.location.toString().split('#')[0];
+            //     history.replaceState(null, null, location + '#' + pageName);
+            // }
+          // };
+        //   allHScroll.forEach(hScroll => {
+        //     const rect = hScroll.getBoundingClientRect();
+        //     if (rect.top >= 0 && rect.top < 150) {
+        //       hScroll.classList.add('on-screen');
+        //     } else {
+        //       hScroll.classList.remove('on-screen');
+        //     }
+        //   });
+        //
+        // });
+console.log('fin');
+    console.log(localStorage);
   });
+
 
 

@@ -135,10 +135,11 @@ p {
 
 .ada-page {
   display: block;
+    margin: 1px;
 }
-.ada-text-group{
-  display: contents;
-}
+/*.ada-text-group{*/
+/*  display: contents;*/
+/*}*/
 
 .az p {
   height: 100vh;
@@ -498,13 +499,65 @@ a.logo {
 	opacity: 0.0001;
 	text-align: right;
 }
-.ada-lettrine.i-cyan {
-	width: 2.5em;
-	background-image: url(../images/I-cyan.png);
+.ada-lettrine.a-fucsia {
+    width: 3.5em;
+    background-image: url(../images/A-fucsia.png);
+}
+.ada-lettrine.a-red {
+    width: 3.5em;
+    background-image: url(../images/A-red2.png);
+}
+.ada-lettrine.a-violet {
+    width: 3.9em;
+    background-image: url(../images/A-violet.png);
+}
+.ada-lettrine.a-yellow {
+    width: 3.9em;
+    background-image: url(../images/A-yellow.png);
+}
+.ada-lettrine.a-green {
+    width: 3.4em;
+    background-image: url(../images/A-olive.png);
+}
+.ada-lettrine.a-cyan {
+    width: 3.4em;
+    background-image: url(../images/A-cyan.png);
+}
+.ada-lettrine.c-red {
+    width: 3em;
+    background-image: url(../images/C-red1.png);
 }
 .ada-lettrine.d-red {
 	width: 3.9em;
 	background-image: url(../images/D-red1.png);
+}
+.ada-lettrine.e-yellow {
+    width: 2.8em;
+    background-image: url(../images/E-yellow.png);
+}
+.ada-lettrine.e-cyan {
+    width: 2.8em;
+    background-image: url(../images/E-cyan.png);
+}
+.ada-lettrine.e-pink {
+    width: 2.8em;
+    background-image: url(../images/E-pink.png);
+}
+.ada-lettrine.e-green {
+    width: 2.8em;
+    background-image: url(../images/E-green.png);
+}
+.ada-lettrine.i-cyan {
+    width: 2.2em;
+    background-image: url(../images/I-cyan.png);
+}
+.ada-lettrine.i-yellow {
+    width: 2.2em;
+    background-image: url(../images/I-yellow.png);
+}
+.ada-lettrine.j-pink {
+    width: 2.2em;
+    background-image: url(../images/J-pink.png);
 }
 .ada-lettrine.l-green {
 	width: 3em;
@@ -518,10 +571,6 @@ a.logo {
 	width: 3em;
 	background-image: url(../images/L-lightcyan.png);
 }
-.ada-lettrine.z-brown {
-	width: 3.4em;
-	background-image: url(../images/Z-brown.png);
-}
 .ada-lettrine.l-red {
 	width: 3em;
 	background-image: url(../images/L-red2.png);
@@ -530,21 +579,41 @@ a.logo {
 	width: 5em;
 	background-image: url(../images/M-yellow.png);
 }
+.ada-lettrine.o-cyan {
+    width: 3.4em;
+    background-image: url(../images/O-cyan.png);
+}
+.ada-lettrine.o-green {
+    width: 3.4em;
+    background-image: url(../images/O-green.png);
+}
+.ada-lettrine.s-red1 {
+    width: 2.5em;
+    background-image: url(../images/S-red1.png);
+}
 .ada-lettrine.t-pink {
 	width: 3.2em;
 	background-image: url(../images/T-pink.png);
+}
+.ada-lettrine.t-olive {
+    width: 3.2em;
+    background-image: url(../images/T-olive.png);
+}
+.ada-lettrine.t-red2 {
+    width: 3.2em;
+    background-image: url(../images/T-red2.png);
 }
 .ada-lettrine.u-green {
 	width: 3.7em;
 	background-image: url(../images/U-green.png);
 }
-.ada-lettrine.a-violet {
-	width: 3.9em;
-	background-image: url(../images/A-violet.png);
+.ada-lettrine.u-yellow {
+    width: 3.4em;
+    background-image: url(../images/U-yellow.png);
 }
-.ada-lettrine.e-yellow {
-	width: 3em;
-	background-image: url(../images/E-yellow.png);
+.ada-lettrine.z-brown {
+    width: 3.4em;
+    background-image: url(../images/Z-brown.png);
 }
 
 
@@ -569,4 +638,11 @@ a.cta:hover {
 .editions figure img {
   max-width: 50%;
   margin: 0.5em auto;
+}
+
+ul.lang-list {
+    margin: 1em 0 1em 0;
+    border-top: 1px dotted #333;
+    border-bottom: 1px dotted #333;
+    padding: 1em 0 1em 0;
 }
