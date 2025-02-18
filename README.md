@@ -17,5 +17,3 @@ Si vous réalisez une traduction, merci de la signaler ici, cela permettrait de 
 contact : editorial@cfeditions.com
 
 Avec le soutien de la Direction du numérique pour l’éducation du ministère de l’Éducation nationale et de la Jeunesse.
-
-hello
