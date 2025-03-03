@@ -10,6 +10,14 @@ Version web de l'ouvrage Ada & Zangemann de Matthias Kirschner et Sandra Brandst
 
 Les informations de licence sont dans la page colophon.html.
 
+## Auteurs
+
+- Matthias Kirschner et Sandra Brandstätter
+- FSFE
+- Ministère de l'Éducation Nationale
+- C&F Éditions
+- Stéphane Paillet
+
 ## Licence
 
 Sauf mention contraire, l'ensemble des éléments du site Web est sous licence :
