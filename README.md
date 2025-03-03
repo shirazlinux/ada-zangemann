@@ -2,7 +2,7 @@
 
 **Note importante** : Cette version est en cours de développement. Elle n'est absolument pas sèche :)
 
-C'est le portail d'accueil du site [Ada & Zangemann](https://ada-zangemann.forge.apps.education.fr/).
+C'est le portail d'accueil du site [Ada & Zangemann à l'école](https://ada-zangemann.forge.apps.education.fr/).
 
 ## Application livre en ligne multilingue
 
