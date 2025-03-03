@@ -20,6 +20,12 @@ h3 {
   font-size: 1.2em;
   line-height: 1.0;
 }
+
+a {
+  font-weight: bold;
+  color: #004789;
+}
+
 footer a {
   font-weight: bold;
   color: #ffe769;
@@ -56,14 +62,31 @@ footer {
 .container article {
    background-color: #a6d2d3;
    border-radius: 10px;
-   border: 5px solid #ffe769;
-   padding: 10px;
+   //border: 2px solid #ffe769;
+   padding: 20px;
    font-size: 1.2em;
+}
+
+.container header {
+  background-color: #fff;
+  border: 1px solid #00bee3;
+  padding-bottom: 2px;
+  margin-bottom: 10px;
+}
+
+.container .align-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .signature {
+  text-align: right;
 }
 
 .homebox {
   background-color: #daeee1;
-  border: 5px solid #ffe769;
+  border: 2px solid #ffe769;
   border-radius: 10px;
   padding: 10px;
   margin: 10px;
@@ -76,6 +99,10 @@ footer {
 }
 .homebox a:hover {
   text-decoration: underline;
+}
+
+.btn {
+  text-align: center;
 }
 
 embed  {
