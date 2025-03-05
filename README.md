@@ -14,9 +14,9 @@ Les informations de licence sont dans la page colophon.html.
 
 - Matthias Kirschner et Sandra Brandstätter
 - FSFE
-- Ministère de l'Éducation Nationale
-- C&F Éditions
-- Stéphane Paillet
+- Alexis KAUFFMANN (Ministère de l'Éducation Nationale et de la Jeunesse)
+- Nicolas TAFFIN (C&F Éditions)
+- Stéphane PAILLET
 
 ## Licence
 
