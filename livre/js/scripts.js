@@ -183,7 +183,7 @@ window.addEventListener('load', () => {
         localStorage.setItem('ada_currentUrl', window.location.href);
         localStorage.setItem('ada_pageId', '');
         localStorage.setItem('ada_reading', false);
-        let footerFile = getServerName() + '/' + currentLanguage + "/footer_" + currentLanguage + ".frg.html";
+        let footerFile = getServerName() + '/livre/' + currentLanguage + "/footer_" + currentLanguage + ".frg.html";
         getText(footerFile, "footer-content");
 
         async function getText(file, idToFill) {
