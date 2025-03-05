@@ -147,7 +147,7 @@ function initialisation() {
     if (!currentLanguage) {
         let currentLanguage = getNavigatorPreferredLanguage();
     }
-    let newUrl = getServerName() + '/' + currentLanguage +  '/index_' + currentLanguage + '.html';
+    let newUrl = getServerName() + '/' + currentLanguage + '/livre' + '/index_' + currentLanguage + '.html';
     localStorage.setItem('initialisation', 'initialized');
     localStorage.setItem('ada_currentLanguage', currentLanguage);
     localStorage.setItem('ada_currentUrl', newUrl);
