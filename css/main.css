@@ -1,0 +1,112 @@
+@font-face {
+  font-family: luciole;
+  src: url(../fonts/Luciole-Regular.woff2);
+}
+
+body {
+  background-color: #4daca2;
+  font-family: luciole;
+}
+h1 {
+  text-align: center;
+  font-size: 1.8em;
+  line-height: 1.0;
+}
+h2 {
+  font-size: 1.5em;
+  line-height: 1.0;
+}
+h3 {
+  font-size: 1.2em;
+  line-height: 1.0;
+}
+
+a {
+  font-weight: bold;
+  color: #004789;
+}
+
+footer a {
+  font-weight: bold;
+  color: #ffe769;
+  text-decoration: none;
+}
+footer a:hover {
+  color: #c43741;
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  color: #333;
+  margin-top: 5px;
+}
+
+#navbar-toggle-cbox {
+  display:none
+}
+#navbar-toggle-cbox:checked ~ .collapse {
+    display: block;
+}
+
+.navbar-brand img {
+  height: 100%;
+  display:inline-block;
+}
+
+//div[class^='col-'], div[class*=' col-'] {
+//  padding-right: 0;
+//  padding-left: 0;
+//}
+
+.container article {
+   background-color: #a6d2d3;
+   border-radius: 10px;
+   //border: 2px solid #ffe769;
+   padding: 20px;
+   font-size: 1.2em;
+}
+
+.container header {
+  background-color: #fff;
+  border: 1px solid #00bee3;
+  padding-bottom: 2px;
+  margin-bottom: 10px;
+}
+
+.container .align-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .signature {
+  text-align: right;
+}
+
+.homebox {
+  background-color: #daeee1;
+  border: 2px solid #ffe769;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.homebox a {
+  font-weight: bold;
+  color: #4daca2;
+  text-decoration: none;
+}
+.homebox a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  text-align: center;
+}
+
+embed  {
+  min-width: 100%;
+  aspect-ratio: 16 / 9; 
+}
+

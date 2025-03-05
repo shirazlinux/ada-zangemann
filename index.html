@@ -1,25 +1,118 @@
-<h1>Ada &amp; Zangemann</h1>
-<script  type="text/javascript">
-    var existingLanguages = ['fr', 'en', 'de'];
-    localStorage.clear();
-    let currentLanguage = getPreferredLanguage();
-    localStorage.setItem('ada_currentLanguage', currentLanguage);
-    let newUrl = window.location.href + currentLanguage +  '/index_' + currentLanguage + '.html';
-    localStorage.setItem('ada_myHref', newUrl);
-    localStorage.setItem('ada_pageId', '');
-    localStorage.setItem('ada_serverName', window.location.href);
-    localStorage.setItem('ada_existingLanguages', existingLanguages);
-    localStorage.setItem('ada_reading', false);
-    //console.log(localStorage);
-    window.location.href = localStorage.getItem('ada_myHref');
-
-    function getPreferredLanguage() {
-        let preferredLanguage = navigator.language.split("-")[0];
-        //console.log("langage système ", preferredLanguage);
-        if (existingLanguages.includes(preferredLanguage)) {
-            return preferredLanguage;
-        } else {
-            return 'fr';
-        }
-    }
-</script>
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Ada & Zangemann à l’école</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Ministère de l'Éducation Nationale et de la Jeunesse" />
+    <meta name="description" content="Ada et Zangemann est un livre et un film pour les enfants et jeunes ados 
+    qui pourrait bien leur transmettre le plaisir de bricoler. Un livre sur l’informatique libre, 
+    la camaraderie et le rôle des filles pour une technique au service de l’autonomie. Un conte vivant et superbement illustré."/>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <input type="checkbox" id="navbar-toggle-cbox">
+        <div class="navbar-header">
+          <label for="navbar-toggle-cbox" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </label>
+          <a class="navbar-brand" href="/"><img src="/img/ada-square.png" />Ada & Zangemann à l’école</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="/">Accueil</a></li>
+            <li><a href="/presentation.html">Présentation</a></li>
+            <li><a href="/livre/">Le livre</a></li>
+            <li><a href="/film/">Le film</a></li>
+            <li><a href="/jeu/">Le jeu</a></li>
+            <li><a href="/ressources/">Ressources</a></li>
+            <li><a href="/a-propos.html">À propos</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-xs-12 col-sm-12">
+          <div class="homebox">
+            <img src="/img/ada_header_home.jpg" alt="Couverture du livre Ada & Zangemann" width="100%" />
+            <p style="padding-top: 10px; font-size: 1.2em; text-align: justify;">Bienvenue sur « Ada & Zangemann à l'école », le site de la communauté scolaire francophone dédié au livre Ada & Zangemann et à tous ses dérivés rendus possible par la licence libre. 
+            Nous invitons les enseignantes et enseignants à découvrir et s'approprier Ada & Zangemann pour en faire profiter leurs élèves, en classe comme à la maison. Car nous pensons que ce 
+            conte constitue une excellente médiation pour évoquer le numérique et ses enjeux dès le plus jeune âge.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-md-4">
+          <div class="homebox">
+            <h1><a href="livre/" title="Lire le livre en ligne">Lire en ligne</a></h1>
+            <p>Lecture en ligne du livre, en français mais aussi en anglais et en allemand.</p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+          <div class="homebox">
+            <h1><a href="film/" title="Regarder le film">Voir le film</a></h1>
+            <p>La version film du livre, en français et bientôt aussi en anglais et en allemand.</p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+          <div class="homebox">
+            <h1><a href="ressources/audio.html" title="">Écouter</a></h1>
+            <p>La version audio du livre au format Ogg Vorbis en français allemand anglais italien.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-md-4">
+          <div class="homebox">
+            <h1><a href="ressources/" title="">Étudier</a></h1>
+            <p>Ressources et dossiers pédagogiques pour préparer des activités avec les élèves.</p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+          <div class="homebox">
+            <h1><a href="livre/az-diaporama.html" title="Voir le diaporama">Lire en classe</a></h1>
+            <p>La version diaporama, avec les images sans le texte, pour une lecture publique du livre.</p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+          <div class="homebox">
+            <h1><a href="jeu/" title="Découvrir le jeu">Jouer au jeu</a></h1>
+            <p>Un jeu de plateau en cours de réalisation autour du livre.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-md-4">
+          <div class="homebox">
+            <h1><a href="ressources/telechargement.html" title="">Télécharger</a></h1>
+            <p>Les versions numériques françaises et multilingues du livre au format PDF et ePUB.</p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+          <div class="homebox">
+            <h1><a href="ressources/remix.html" title="">Remixer</a></h1>
+            <p>Ressources pour reprendre, dériver, créer des oeuvres autour du conte.</p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+          <div class="homebox">
+            <h1><a href="commander.html" title="Acheter le livre">Commander le livre</a></h1>
+            <p>Acheter le livre chez notre partenaire C&F Éditions.</p>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <p>Copyleft 2022-2025 Matthias Kirschner & Sandra Brandstätter - FSFE - Ministère de l'Éducation Nationale - C&F éditions<br />
+          Licence <a href="https://creativecommons.org/licenses/by-sa/4.0">Creative Commons Attribution-ShareAlike 4.0 (CC‑BY‑SA‑4.0)</a></p>
+      </footer>
+    </div>
+  </body>
+</html>

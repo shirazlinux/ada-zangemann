@@ -1,20 +1,25 @@
-# ada-web-multilingue
+# Ada & Zangemann - Portail
 
+**Note importante** : Cette version est en cours de développement. Elle n'est absolument pas sèche :)
 
-Dépôt de la version web de l'ouvrage Ada & Zangemann de Matthias Kirschner et Sandra Brandstätter dans son édition française par C&F éditions.
+C'est le portail d'accueil du site [Ada & Zangemann à l'école](https://ada-zangemann.forge.apps.education.fr/).
 
-Le site est visible à l'adresse : https://ada-zangemann.forge.apps.education.fr/
+## Application livre en ligne multilingue
 
-Licence Creative Commons : Attribution, Partage dans les mêmes conditions (CC BY-SA 4.0 FR). 
+Version web de l'ouvrage Ada & Zangemann de Matthias Kirschner et Sandra Brandstätter dans son édition multilingue par C&F éditions.
 
-Les informations de licence sont dans la page colophon.html
+Les informations de licence sont dans la page colophon.html.
 
+## Auteurs
 
-## Traduction
+- Matthias Kirschner et Sandra Brandstätter
+- FSFE
+- Alexis KAUFFMANN (Ministère de l'Éducation Nationale et de la Jeunesse)
+- Nicolas TAFFIN (C&F Éditions)
+- Stéphane PAILLET
 
-Si vous réalisez une traduction, merci de la signaler ici, cela permettrait de réaliser et d'intégrer une version multilingue du site.
+## Licence
 
+Sauf mention contraire, l'ensemble des éléments du site Web est sous licence :
+- Creative Commons : Attribution, Partage dans les mêmes conditions ([CC BY-SA 4.0 FR](https://creativecommons.org/licenses/by-sa/4.0/deed.fr)).
 
-contact : editorial@cfeditions.com
-
-Avec le soutien de la Direction du numérique pour l’éducation du ministère de l’Éducation nationale et de la Jeunesse.
