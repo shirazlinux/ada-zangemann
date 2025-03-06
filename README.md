@@ -1,6 +1,6 @@
 # Ada & Zangemann - Portail
 
-**Note importante** : Cette version est en cours de développement. Elle est mise en ligne le Mercredi 05 Mars 2025, et sera agrémenter et augmentée de nouvelles ressources dans les jours et semaines qui viennent.
+**Note importante** : Cette version est en cours de développement. Elle est mise en ligne le Mercredi 05 Mars 2025, et sera agrémentée et augmentée de nouvelles ressources dans les jours et semaines qui viennent.
 
 C'est le portail d'accueil du site [Ada & Zangemann à l'école](https://ada-zangemann.forge.apps.education.fr/).
 
