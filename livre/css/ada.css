@@ -135,11 +135,11 @@ p {
 
 .ada-page {
   display: block;
-    margin: 1px;
+/*     margin: 1px; */
 }
-/*.ada-text-group{*/
-/*  display: contents;*/
-/*}*/
+.ada-text-group {
+ display: contents;
+}
 
 .az p {
   height: 100vh;
