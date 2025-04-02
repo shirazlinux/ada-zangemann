@@ -1,4 +1,4 @@
-# Ada & Zangemann - Portail
+# Ada & Zangemann à l'école - Portail
 
 **Note importante** : Cette version est en cours de développement. Elle est mise en ligne le Mercredi 05 Mars 2025, et sera agrémentée et augmentée de nouvelles ressources dans les jours et semaines qui viennent.
 
@@ -13,9 +13,9 @@ Les informations de licence sont dans la page colophon.html.
 ## Auteurs
 
 - Matthias Kirschner et Sandra Brandstätter
-- FSFE
-- Alexis Kauffmann (Ministère de l'Éducation Nationale et de la Jeunesse)
-- Nicolas Taffin (C&F Éditions)
+- [FSFE](https://fsfe.org/)
+- Alexis Kauffmann ([Ministère de l'Éducation Nationale et de la Jeunesse](https://www.education.gouv.fr/))
+- Nicolas Taffin ([C&F Éditions](https://cfeditions.com/))
 - Stéphane Paillet
 
 ## Licence
