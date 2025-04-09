@@ -8,6 +8,10 @@ C'est le portail d'accueil du site [Ada & Zangemann à l'école](https://ada-zan
 
 Version web de l'ouvrage Ada & Zangemann de Matthias Kirschner et Sandra Brandstätter dans son édition multilingue par C&F éditions.
 
+Si vous réalisez une traduction, merci de la signaler ici, cela permettrait de réaliser et d'intégrer une version multilingue du site.
+
+contact : editorial@cfeditions.com
+
 Les informations de licence sont dans la page colophon.html.
 
 ## Auteurs
