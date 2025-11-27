@@ -4,6 +4,7 @@
 }
 
 body {
+  direction: rtl !important ;
   background-color: #4daca2;
   font-family: luciole;
 }
@@ -52,6 +53,10 @@ footer {
 .navbar-brand img {
   height: 100%;
   display:inline-block;
+}
+
+.navbar-nav > li {
+  float: right;
 }
 
 //div[class^='col-'], div[class*=' col-'] {
