@@ -3,10 +3,14 @@
   src: url(../fonts/Luciole-Regular.woff2);
 }
 
+@font-face {
+  font-family: vazirmatn;
+  src: url(../fonts/Vazirmatn-Medium.woff2);
+}
 body {
   direction: rtl !important ;
   background-color: #4daca2;
-  font-family: luciole;
+  font-family: vazirmatn;
 }
 h1 {
   text-align: center;
