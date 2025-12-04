@@ -1,20 +1,20 @@
-# ada-web-multilingue
+# وب‌سایت چندزبانه اِدا و زِنگمَن
 
+**مخزن اصلی سورس وب‌سایت چندزبانه** کتاب «اِدا و زِنگمَن» اثر ماتیاس کیرشنر و ساندرا براندشتتر در ویرایش فرانسوی منتشر شده توسط انتشارات C&F.
 
-Dépôt de la version web de l'ouvrage Ada & Zangemann de Matthias Kirschner et Sandra Brandstätter dans son édition française par C&F éditions.
+این وب‌سایت در آدرس زیر قابل مشاهده است:  
+https://ada-zangemann.forge.apps.education.fr/
 
-Le site est visible à l'adresse : https://ada-zangemann.forge.apps.education.fr/
+## دسترسی به سورس
 
-Licence Creative Commons : Attribution, Partage dans les mêmes conditions (CC BY-SA 4.0 FR). 
+**سورس نسخه فارسی این وب‌سایت در مخزن کدبرگ شیرازلینوکس نگهداری و توسعه داده می‌شود.**
 
-Les informations de licence sont dans la page colophon.html
+**مجوز:** کرییتیو کامنز: انتساب - اشتراک‌گذاری تحت شرایط یکسان (CC BY-SA 4.0 FR)
 
+اطلاعات کامل مجوز در صفحه colophon.html درج شده است.
 
-## Traduction
+## ترجمه
 
-Si vous réalisez une traduction, merci de la signaler ici, cela permettrait de réaliser et d'intégrer une version multilingue du site.
+اگر قصد انجام ترجمه این اثر را دارید، لطفاً از این طریق اطلاع دهید تا نسخه چندزبانه وب‌سایت تهیه و یکپارچه شود.
 
-
-contact : editorial@cfeditions.com
-
-Avec le soutien de la Direction du numérique pour l’éducation du ministère de l’Éducation nationale et de la Jeunesse.
+**تماس:** editorial@cfeditions.com
