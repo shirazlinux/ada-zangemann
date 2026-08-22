@@ -1,13 +1,8 @@
-#        _
-#       [ ]
-#      (   )
-#       |>|
-#    __/===\__
-#   //| o=o |\\
-# <]  | o=o |  [>
-#     \=====/
-#    / / | \ \
-#   <_________>
+User-agent: *
+Allow: /
+
+Sitemap: https://ada.fsfp.ir/sitemap.xml
+
 User-Agent: GPTBot
 User-Agent: ClaudeBot
 User-Agent: Claude-Web
@@ -24,4 +19,3 @@ User-Agent: Bytespider
 User-Agent: Amazonbot
 User-Agent: Youbot
 Disallow: /
-
