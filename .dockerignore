@@ -1,0 +1,8 @@
+.git
+.gitignore
+deploy.sh
+docker-compose.yml
+.dockerignore
+PAASTA.md
+*.swp
+*~

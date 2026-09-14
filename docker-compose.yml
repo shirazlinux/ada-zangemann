@@ -1,0 +1,8 @@
+services:
+  ada:
+    build: .
+    image: ada-zangemann:local
+    container_name: ada-zangemann
+    ports:
+      - "18080:8080"
+    restart: unless-stopped
