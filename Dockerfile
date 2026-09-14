@@ -1,5 +1,5 @@
 # Ada & Zangemann static site for Paasta (neda1).
-# Public HTTP is port 8080.
+# Public HTTP is port 8080. Paasta runs the container unprivileged (uid 101).
 FROM docker.io/library/nginx:1.28-alpine
 
 COPY nginx.conf /etc/nginx/nginx.conf
@@ -14,4 +14,12 @@ COPY order /usr/share/nginx/html/order
 COPY presentation /usr/share/nginx/html/presentation
 COPY ressources /usr/share/nginx/html/ressources
 
+RUN mkdir -p /tmp/nginx \
+ && chown -R 101:101 /usr/share/nginx/html /tmp/nginx /var/cache/nginx /var/run \
+ && chmod -R a+rX /usr/share/nginx/html
+
+# Skip the stock entrypoint (it chowns cache dirs and needs root).
+USER 101
 EXPOSE 8080
+ENTRYPOINT ["nginx"]
+CMD ["-c", "/etc/nginx/nginx.conf", "-g", "daemon off;"]
