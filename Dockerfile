@@ -10,6 +10,7 @@ COPY css /usr/share/nginx/html/css
 COPY film /usr/share/nginx/html/film
 COPY fonts /usr/share/nginx/html/fonts
 COPY img /usr/share/nginx/html/img
+COPY donate /usr/share/nginx/html/donate
 COPY order /usr/share/nginx/html/order
 COPY presentation /usr/share/nginx/html/presentation
 COPY ressources /usr/share/nginx/html/ressources
