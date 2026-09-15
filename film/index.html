@@ -139,14 +139,12 @@
 
         <section class="film-edition" id="fa" aria-labelledby="film-fa-title">
           <h2 id="film-fa-title">نسخه فارسی</h2>
-          <div class="film-fa-box" data-server="iran">
-            <div class="film-source" role="group" aria-label="انتخاب سرور پخش">
-              <span class="film-source__label">سرور پخش</span>
-              <button type="button" class="film-source__btn film-source__btn--iran is-active" data-film-src="iran" aria-pressed="true">ایران</button>
-              <button type="button" class="film-source__btn film-source__btn--out" data-film-src="out" aria-pressed="false">خارج</button>
-              <span class="film-source__status" id="film-fa-status">الان از سرور ایران پخش می‌شود</span>
-            </div>
-            <div class="film-player">
+          <div class="film-source" role="group" aria-label="انتخاب سرور پخش">
+            <span class="film-source__label">سرور پخش:</span>
+            <button type="button" class="film-source__btn is-active" data-film-src="iran" aria-pressed="true">ایران</button>
+            <button type="button" class="film-source__btn" data-film-src="out" aria-pressed="false">خارج</button>
+          </div>
+          <div class="film-player">
               <iframe
                 id="film-fa-frame"
                 title="اِدا و زِنگمَن"
@@ -157,7 +155,6 @@
                 loading="lazy"
                 referrerpolicy="strict-origin-when-cross-origin"></iframe>
             </div>
-          </div>
           <p class="film-meta">
             زبان: فارسی · دوبله و گویندگی: دیبا زارع · تهیه‌کننده: شیرازلینوکس
             ·
@@ -259,10 +256,8 @@
               status: "الان از سرور خارج پخش می‌شود"
             }
           };
-          var box = document.querySelector(".film-fa-box");
           var frame = document.getElementById("film-fa-frame");
           var watch = document.getElementById("film-fa-watch");
-          var status = document.getElementById("film-fa-status");
           var buttons = document.querySelectorAll("[data-film-src]");
           if (!frame || !buttons.length) return;
           buttons.forEach(function (btn) {
@@ -272,8 +267,6 @@
               if (!src) return;
               frame.src = src.embed;
               if (watch) watch.href = src.watch;
-              if (status) status.textContent = src.status;
-              if (box) box.setAttribute("data-server", key);
               buttons.forEach(function (b) {
                 var on = b === btn;
                 b.classList.toggle("is-active", on);
