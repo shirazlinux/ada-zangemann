@@ -840,10 +840,16 @@ embed  {
   background: #fff4a8;
 }
 
-.film-source__btn.is-active {
-  color: #0d2a27;
-  background: #ffe769;
-  border-color: #f0d23a;
+.film-source__btn[data-film-src="iran"].is-active {
+  color: #fff;
+  background: #2e8b57;
+  border-color: #227a4a;
+}
+
+.film-source__btn[data-film-src="out"].is-active {
+  color: #fff;
+  background: #1e4d8c;
+  border-color: #163a6b;
 }
 
 .film-source__status {
