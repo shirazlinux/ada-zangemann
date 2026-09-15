@@ -809,6 +809,43 @@ embed  {
   line-height: 1.3;
 }
 
+.film-source {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0 0 0.75rem;
+}
+
+.film-source__label {
+  font-weight: bold;
+  color: #143530;
+  margin-left: 0.35rem;
+}
+
+.film-source__btn {
+  display: inline-block;
+  padding: 0.35em 0.95em;
+  font: inherit;
+  font-weight: bold;
+  color: #143530;
+  background: rgba(255, 255, 255, 0.45);
+  border: 2px solid rgba(255, 231, 105, 0.85);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.film-source__btn:hover,
+.film-source__btn:focus {
+  background: #ffe769;
+}
+
+.film-source__btn.is-active {
+  background: #ffe769;
+  border-color: #f0d23a;
+  box-shadow: 0 2px 8px rgba(0, 40, 35, 0.12);
+}
+
 .film-player {
   position: relative;
   width: 100%;

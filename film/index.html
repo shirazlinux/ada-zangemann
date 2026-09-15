@@ -139,9 +139,15 @@
 
         <section class="film-edition" id="fa" aria-labelledby="film-fa-title">
           <h2 id="film-fa-title">نسخه فارسی</h2>
+          <div class="film-source" role="group" aria-label="انتخاب سرور پخش">
+            <span class="film-source__label">سرور پخش:</span>
+            <button type="button" class="film-source__btn is-active" data-film-src="iran" aria-pressed="true">ایران</button>
+            <button type="button" class="film-source__btn" data-film-src="out" aria-pressed="false">خارج</button>
+          </div>
           <div class="film-player">
             <iframe
-              title="ادا و زنگمن"
+              id="film-fa-frame"
+              title="اِدا و زِنگمَن"
               src="https://tube.sudoshz.ir/videos/embed/iUyxHQvJE3ohehtmCF2nN2"
               allow="fullscreen"
               allowfullscreen
@@ -152,7 +158,7 @@
           <p class="film-meta">
             زبان: فارسی · دوبله و گویندگی: دیبا زارع · تهیه‌کننده: شیرازلینوکس
             ·
-            <a href="https://tube.sudoshz.ir/w/iUyxHQvJE3ohehtmCF2nN2" rel="noopener noreferrer" target="_blank" title="صفحه فیلم فارسی در پیرتیوب شیرازلینوکس">مشاهده در تیوب شیرازلینوکس</a>
+            <a id="film-fa-watch" href="https://tube.sudoshz.ir/w/iUyxHQvJE3ohehtmCF2nN2" rel="noopener noreferrer" target="_blank">مشاهده در پیرتیوب</a>
           </p>
         </section>
 
@@ -236,6 +242,38 @@
         </div>
       </footer>
     </div>
+      <script>
+        (function () {
+          var sources = {
+            iran: {
+              embed: "https://tube.sudoshz.ir/videos/embed/iUyxHQvJE3ohehtmCF2nN2",
+              watch: "https://tube.sudoshz.ir/w/iUyxHQvJE3ohehtmCF2nN2"
+            },
+            out: {
+              embed: "https://tubedu.org/videos/embed/fqw65yuKVHtVbhibgnLZ9C",
+              watch: "https://tubedu.org/w/fqw65yuKVHtVbhibgnLZ9C"
+            }
+          };
+          var frame = document.getElementById("film-fa-frame");
+          var watch = document.getElementById("film-fa-watch");
+          var buttons = document.querySelectorAll("[data-film-src]");
+          if (!frame || !buttons.length) return;
+          buttons.forEach(function (btn) {
+            btn.addEventListener("click", function () {
+              var key = btn.getAttribute("data-film-src");
+              var src = sources[key];
+              if (!src) return;
+              frame.src = src.embed;
+              if (watch) watch.href = src.watch;
+              buttons.forEach(function (b) {
+                var on = b === btn;
+                b.classList.toggle("is-active", on);
+                b.setAttribute("aria-pressed", on ? "true" : "false");
+              });
+            });
+          });
+        })();
+      </script>
       <script src="https://donate.sudoshz.ir/embed/loader.js" async></script>
   </body>
 </html>
