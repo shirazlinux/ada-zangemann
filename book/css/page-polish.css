@@ -225,6 +225,15 @@ body.page footer#footer-content .soutien a {
   color: #0d5c9e;
 }
 
+body.page footer#footer-content .site-footer__donate {
+  margin-top: 1rem;
+}
+
+body.page footer#footer-content .site-footer__donate-title {
+  font-weight: 700;
+  margin: 0 0 0.6rem;
+}
+
 /* —— Menu panel polish (all book pages with .main-menu, safe) —— */
 nav.main-menu ul {
   border: 2px solid rgba(255, 231, 105, 0.85);

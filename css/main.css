@@ -78,6 +78,16 @@ footer a {
 .site-footer a:hover,
 footer a:hover {
   color: #c43741;
+}
+
+.site-footer__donate {
+  margin-top: 1rem;
+}
+
+.site-footer__donate-title {
+  font-weight: 700;
+  margin: 0 0 0.6rem;
+}
   text-decoration: underline;
 }
 
