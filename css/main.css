@@ -88,7 +88,14 @@ footer a:hover {
   font-weight: 700;
   margin: 0 0 0.6rem;
 }
-  text-decoration: underline;
+
+.site-footer__donate .yavar-support {
+  overflow: visible;
+}
+
+.site-footer__donate iframe {
+  overflow: hidden;
+  vertical-align: top;
 }
 
 #navbar-toggle-cbox {

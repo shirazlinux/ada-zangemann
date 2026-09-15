@@ -234,6 +234,14 @@ body.page footer#footer-content .site-footer__donate-title {
   margin: 0 0 0.6rem;
 }
 
+body.page footer#footer-content .yavar-support {
+  overflow: visible;
+}
+
+body.page footer#footer-content iframe {
+  overflow: hidden;
+}
+
 /* —— Menu panel polish (all book pages with .main-menu, safe) —— */
 nav.main-menu ul {
   border: 2px solid rgba(255, 231, 105, 0.85);
