@@ -11,8 +11,10 @@ COPY film /usr/share/nginx/html/film
 COPY fonts /usr/share/nginx/html/fonts
 COPY img /usr/share/nginx/html/img
 COPY order /usr/share/nginx/html/order
+COPY payam /usr/share/nginx/html/payam
 COPY presentation /usr/share/nginx/html/presentation
 COPY ressources /usr/share/nginx/html/ressources
+COPY video /usr/share/nginx/html/video
 
 RUN mkdir -p /tmp/nginx \
  && chown -R 101:101 /usr/share/nginx/html /tmp/nginx /var/cache/nginx /var/run \
