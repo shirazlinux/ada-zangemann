@@ -1,3 +1,10 @@
-*
-!Dockerfile
-!nginx.conf
+.git
+.gitignore
+deploy.sh
+docker-compose.yml
+.dockerignore
+PAASTA.md
+README.md
+*.swp
+*~
+*.psd
