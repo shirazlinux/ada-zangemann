@@ -67,6 +67,10 @@ footer p {
   font-size: 1.02em;
 }
 
+.site-footer__source {
+  font-size: 1.02em;
+}
+
 .site-footer a,
 footer a {
   font-weight: bold;

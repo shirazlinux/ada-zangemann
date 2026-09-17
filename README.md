@@ -14,6 +14,10 @@ contact : editorial@cfeditions.com
 
 Les informations de licence sont dans la page colophon.html.
 
+## Source
+
+Persian site source (Codeberg): https://codeberg.org/shirazlinux/ada-zangemann
+
 ## Auteurs
 
 - Matthias Kirschner et Sandra Brandstätter
